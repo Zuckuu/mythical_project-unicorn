@@ -5,12 +5,7 @@
   margin: 0;
   padding: 0;
 }
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff6f6;
-}
+
 
 h1,
 h2 {
@@ -36,7 +31,7 @@ a:active {
 }
 
 /* Header Styles */
-header {
+.header-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,3 +128,5 @@ footer {
 .image {
   margin: 10px;
 }
+
+
