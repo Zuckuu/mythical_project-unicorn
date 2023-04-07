@@ -2,6 +2,10 @@ const cards = document.querySelectorAll('.card');
 let cardOne, cardTwo;
 let disableDeck = false;
 let matchedCard = 0; 
+let score = document.getElementById('score');
+let scoreNUM = 0; 
+let highScore = document.getElementById('high_score');
+let highScoreNUM = 0;
 
 
 function flipCard(e){ 
@@ -27,7 +31,17 @@ function matchCards(img1, img2){
 
     if(img1 === img2){ // if two cards img matched
         matchedCard++; //increment matched value by one
+        scoreNUM += 1000;
+        score.innerHTML = "Score: " + scoreNUM;
+        console.log(score);
         if(matchedCard == 8){ // if matched value is 8 that means user has matched all the cards
+
+            if(scoreNUM > highScoreNUM){
+                highScoreNUM = scoreNUM;
+                highScore.innerHTML= "High Score: " + highScoreNUM;
+                scoreNUM = 0;
+                score.innerHTML = "Score: " + scoreNUM;
+            }
 
             setTimeout(() => { 
                 return shuffleCard();
@@ -40,6 +54,12 @@ function matchCards(img1, img2){
         return disableDeck = false;
     }
     else{
+        if(scoreNUM > 0)
+        {
+            scoreNUM -= 250;
+            score.innerHTML = "Score: " + scoreNUM;
+            console.log(score)
+        }
         setTimeout(() => { // if two card not matched
             cardOne.classList.add('shake');// adding shake class to both card after 400ms
             cardTwo.classList.add('shake');
@@ -68,7 +88,7 @@ function shuffleCard(){
         card.addEventListener('click', flipCard);
 
         let imgTag = card.querySelector('img');
-        imgTag.src = `images/img-${arr[index]}.png`;
+        imgTag.src = `asset/unicorn${arr[index]}.jpg`;
     });
 }
 shuffleCard();
