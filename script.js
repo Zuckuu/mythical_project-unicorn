@@ -91,7 +91,7 @@ function shuffleCard() {
     let imgTag = card.querySelector("img");
     imgTag.src = `asset/unicorn${arr[index]}.jpg`;
   });
-
+  scoreNUM = 0;
   highScore.innerHTML ="High Score: " + window.localStorage.getItem("highscoreLocal");
 }
 shuffleCard();

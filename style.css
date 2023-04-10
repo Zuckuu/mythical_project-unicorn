@@ -35,7 +35,7 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffe6e6;
+  background-color: #ffabd6;
   padding: 20px;
 }
 
@@ -54,6 +54,10 @@ a:active {
 }
 
 /* Main */
+
+.bg{
+  background-color: rgb(167, 85, 167);
+}
 
 .vid-con {
   width: 900px;
@@ -85,6 +89,7 @@ a:active {
 
 .about-text {
   font-family: "Varela Round", sans-serif;
+  color: rgb(90, 16, 90);
 }
 
 /* Footer Styles */
@@ -102,12 +107,13 @@ footer {
 
 /* Gallery */
 .title-con {
-  margin-top: 30px;
+  
   display: flex;
   justify-content: center;
 }
 .gallery-title {
   font-size: 40px;
+  margin-top: 30px;
 }
 
 .gallery-con {
@@ -122,13 +128,15 @@ footer {
 .gallery {
   display: flex;
   justify-content: center;
-  border: #5e5e5e 2px solid;
+  border: #e371a3 2px solid;
   margin: 5px;
   border-radius: 10px;
+
 }
 
 .image {
   margin: 10px;
+  border-radius: 10px;
 }
 
 
