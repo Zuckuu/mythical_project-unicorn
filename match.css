@@ -114,3 +114,16 @@
         transform: translateX(8px);
     }
 }
+
+
+@media (max-width: 800px) {
+    .container{
+        width: 600px;
+        height: 500px;
+    }
+
+    .match-img{
+        width: 130px;
+        height: 110px;
+    }
+}

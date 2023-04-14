@@ -140,3 +140,27 @@ footer {
 }
 
 
+/* Targeting any viewport that is 800px or smaller */
+@media (max-width: 800px) {
+    .links-con{
+      width: 350px;
+    }
+
+    h1{
+      font-size: 20px;
+    }
+
+    .links{
+      font-size: 15px;
+    }
+
+    .vid-con{
+      width: 500px;
+      height: 300px;
+    }
+
+    iframe{
+      width: 500px;
+      height: 300px;
+    }
+}
