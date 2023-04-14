@@ -6,9 +6,11 @@ let score = document.getElementById("score");
 let scoreNUM = 0;
 let highScore = document.getElementById("high_score");
 let highScoreNUM = 0;
+const flipSound = new Audio ("./sound/sound.mp3");
 
 function flipCard(e) {
   let clickedCard = e.target; //getting user clicked card
+  flipSound.play();
 
   if (clickedCard !== cardOne && !disableDeck) {
     clickedCard.classList.add("flip");
@@ -95,8 +97,9 @@ function shuffleCard() {
   highScore.innerHTML ="High Score: " + window.localStorage.getItem("highscoreLocal");
 }
 shuffleCard();
-
 cards.forEach((card) => {
   // adding click event to all cards
   card.addEventListener("click", flipCard);
 });
+
+
